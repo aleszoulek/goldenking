@@ -1,3 +1,5 @@
+{% load static %}
+
 <form method=post>
     {% csrf_token %}
     {{ form.as_p }}
@@ -13,3 +15,5 @@
 {% for donation in donations %}
 {{ donation.name }} dal {{ donation.amount }} CZK pro {{ donation.charity_fund.name }}<br />
 {% endfor %}
+
+<img src="{% static 'goodjob.png' %}" />
